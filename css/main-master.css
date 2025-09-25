@@ -1,0 +1,43 @@
+/* all */
+:root{
+  --primary-color: #F4991A,
+  --dark-primary-color: #344F1F,
+  --background-color: 
+
+  --background-light: #F9F5F0,
+  --content-dark: #F2EAD3,
+  --subtle-light: #F2EAD3,
+  --subtle-dark: #4A6F33,
+}
+*{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body{
+  padding: 0px;
+  margin: 0px;
+}
+.container{
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .container { width: 750px; }
+  .container-content { width: 750px; }
+}
+@media (min-width: 992px) {
+  .container { width: 970px; }
+  .container-content { width: 970px; }
+}
+@media (min-width: 1200px) {
+  .container { width: 1170px; }
+  .container-content { width: 1170px; }
+}
+/* finish all */
+
+/* start public style */
+
