@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" dir="rtl">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- icon file css -->
+    <link rel="stylesheet" href="../css/all.min.css">
+    <!-- render file css -->
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <!-- main file css -->
+    <link rel="stylesheet" href="../css/main-master.css">
+    <link rel="stylesheet" href="../css/dashborad.css">
+    <link href="../public/icon.ico" rel="icon" type="image/x-icon" />
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <!-- Title -->
+    <title>Tathkira+ | Admin</title>
+  </head>
+  <body class="bg-background-light dir-rtl flex">
+    <aside class="p-1 flex flex-direction-c flex-jc-space-btw w-16 bg-subtle-light min-h-fullScreen">
+      <section class="flex flex-direction-c gap-3 w-full">
+        <img src="../public/tkplus.svg" class="w-8 " alt="" srcset="">
+        <div class="flex flex-direction-c gap-1">
+          <a href="./index.html" class="bold f-1 w-full p-1 hover-bg-primary-light hover-transitions color-content-light rounded-1"><i class="fas fa-home ml-1"></i>
+            الرئيسية
+          </a>
+          <a href="./events.html" class="bold f-1 w-full p-1 hover-bg-primary-light hover-transitions color-content-light rounded-1"><i class="fas fa-calendar-alt ml-1"></i>
+            الفعاليات
+          </a>
+          <a href="./tickets.html" class="bold f-1 w-full p-1 bg-primary hover-transitions color-content-dark rounded-1"><i class="fas fa-ticket-alt ml-1"></i>
+            التذاكر
+          </a>
+          <a href="./users.html" class="bold f-1 w-full p-1 hover-bg-primary-light hover-transitions color-content-light rounded-1"><i class="fas fa-user ml-1"></i>
+            المستخدمين
+          </a>
+          <a href="./settings.html" class="bold f-1 w-full p-1 hover-bg-primary-light hover-transitions color-content-light rounded-1"><i class="fas fa-cog ml-1"></i>
+            الاعدادت
+          </a>
+        </div>
+      </section>
+
+      <section class="w-full flex">
+        <a href="/" class="logout-btn bold f-1 w-full p-1 hover-transitions rounded-1"><i class="fas fa-sign-out-alt ml-1"></i>
+          تسجل الخروج
+        </a>
+      </section>
+    </aside>
+
+    <main class="p-2 w-full">
+      <section>
+        <div class="flex flex-jc-space-btw flex-ai-center mb-2">
+          <h1 class="f-3 color-content-light m-0">
+            إدارة التذاكر
+          </h1>
+          <button class="btn bg-primary color-content-dark rounded-1 hover-transitions bold">
+            <i class="fas fa-plus ml-1"></i>
+            إضافة تذكرة
+          </button>
+        </div>
+        <section class="bg-subtle-light rounded-2 overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full text-right">
+              <thead class="border-subtle-dark-1">
+                <tr>
+                  <th class="p-15 f-1 bold">رقم التذكرة</th>
+                  <th class="p-15 f-1 bold">الاسم</th>
+                  <th class="p-15 f-1 bold">السعر</th>
+                  <th class="p-15 f-1 bold">الحالة</th>
+                  <th class="p-15 f-1 bold">المستخدم</th>
+                  <th class="p-15 f-1 bold">الفعالية</th>
+                  <th class="p-15 f-1 bold">الإجراءات</th>
+                </tr>
+              </thead>
+              <tbody class="border-subtle-dark-1">
+                <tr class="border-subtle-dark-1">
+                  <td class="p-15">TK-001</td>
+                  <td class="p-15">تذكرة VIP</td>
+                  <td class="p-15">500 ريال</td>
+                  <td class="p-15">
+                    <span class="p-025 f-075 rounded-full bg-primary color-content-dark">متاح</span>
+                  </td>
+                  <td class="p-15">-</td>
+                  <td class="p-15">مؤتمر التقنية 2024</td>
+                  <td class="p-15">
+                    <i class="fas fa-edit f-1 ml-1 color-content-light hover-primary hover-transitions cursor-pointer"></i>
+                    <i class="fas fa-trash-alt f-1 color-content-light hover-red hover-transitions cursor-pointer"></i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
+</html>
