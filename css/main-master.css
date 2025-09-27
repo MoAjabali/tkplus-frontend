@@ -72,6 +72,7 @@ body{
 /* width & hight */
 .w-1{ width: 1rem; } .w-2{ width: 2rem; } .w-3{ width: 3rem; } .w-4{ width: 4rem; }
 .w-5{ width: 5rem; } .w-6{ width: 6rem; } .w-7{ width: 7rem; } .w-8{ width: 8rem; }
+.w-25{ width: 25rem;}
 .w-full{ width: 100%; }
 .h-1{ height: 1rem;} .h-2{ height: 2rem;} .h-3{ height: 3rem;} .h-4{ height: 4rem;}
 .h-25{ height: 25rem; }
@@ -94,6 +95,7 @@ body{
 .color-content-light{ color: var(--content-light); } 
 .color-content-dark{  color: var(--content-dark); }
 .color-lighter-content-dark{  color: var(--lighter-content-dark); }
+.color-primary{ color: var(--primary); }
 .bg-lighter-content-dark{  background-color: var(--lighter-content-dark); }
 .bg-background-light{ background-color: var(--background-light); } 
 .bg-background-dark{ background-color: var(--background-dark); }
@@ -175,6 +177,12 @@ header.border{
 .event-box .budget{
   top: 1rem;
   left: 1rem;
+}
+
+.ticket-bg{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 /* Media */
 @media (max-width: 576px) {
