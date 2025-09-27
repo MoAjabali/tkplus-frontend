@@ -1,21 +1,136 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" dir="rtl">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- icon file css -->
     <link rel="stylesheet" href="css/all.min.css">
-    <!-- rander file css -->
+    <!-- render file css -->
     <!-- <link rel="stylesheet" href="css/normalize.css"> -->
     <!-- main file css -->
-    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/main-master.css">
+    <link href="public/icon.ico" rel="icon" type="image/x-icon" />
     <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <!-- Title -->
     <title>Tathkira+ | Landing Page</title>
   </head>
-  <body>
-    
+  <body class="bg-background-light dir-rtl">
+    <header class="flex flex-jc-space-btw p-1 flex-ai-center dir-rtl border">
+      <div>
+        <img src="public/tkplus.svg" class="w-6" alt="" srcset="">
+      </div>
+
+      <nav class="flex gap-1">
+        <button class="rounded-full f-075 btn bg-primary color-content-dark bold" >
+          <a href="./login.html">
+            تسجيل مستخدم
+          </a>
+        </button>
+        <button class="rounded-full f-075 btn bg-subtle-light color-content-light bold" >
+          <a href="./register.html">
+           مستخدم جديد
+          </a>
+        </button>
+      </nav>
+    </header>
+  
+    <main class="">
+      <!-- This Section Introduction -->
+      <section class="flex flex-ai-center flex-jc-center flex-direction-c margin">
+        <h1 class="f-4 text-center color-content-light m-0 container">
+          طريقك الاوحد للحجز في فعاليات تحكيها لابنائك
+        </h1>
+        <p class="color-content-light f-1 m-2 text-center container">
+          تذكرة+ المنصة الاولى لحجز واكتشاف أفضل الاحداث حولك, من الندوات الى الحفلات كلها بيدك.
+          اكتشف احداث وحفلات وندوات تحكيها لاجيال قادمة
+        </p>
+        <section class="flex gap-1">
+          <button class="rounded-full f-1 btn bg-primary color-content-dark bold" >
+            <a href="./login.html">
+              تسجيل مستخدم
+            </a>
+          </button>
+          <button class="rounded-full f-1 btn bg-subtle-light color-content-light bold" >
+            <a href="./register.html">
+            مستخدم جديد
+            </a>
+          </button>
+        </section>
+      </section>
+
+      <!-- imgs slider -->
+       <!---->
+      <section class="container overflow-hidden relative" >
+        <section class=" gap-1 flex img-slider-container hover-transitions">
+          <div
+              class="img-slider rounded-075"
+              style="background-image: url('public/event1.png');"
+            ></div>
+          <div
+              class="img-slider rounded-075"
+              style="background-image: url('public/event2.png');"
+            ></div>
+          <div
+              class="img-slider rounded-075"
+              style="background-image: url('public/event3.png');"
+            ></div>
+          <div
+              class="img-slider rounded-075 hide"
+              style="background-image: url('public/event4.jpg');"
+            ></div>
+          <div
+              class="img-slider rounded-075"
+              style="background-image: url('public/event5.jpg');"
+            ></div>
+        </section>
+        <section >
+          <span onclick="nextSlide()" class="w-3 h-3 rounded-2 next absolute bg-background-light flex flex-jc-center flex-ai-center cursor-pointer ">
+            <i class="fas fa-arrow-right color-lighter-content-dark f-2 hover-primary hover-transitions"></i>
+          </span>
+          <span onclick="prevSlide()" class="w-3 h-3 rounded-2 prev absolute bg-background-light flex flex-jc-center flex-ai-center cursor-pointer">
+            <i class="fas fa-arrow-left color-lighter-content-dark f-2 hover-primary hover-transitions"></i>
+          </span>
+        </section>
+      </section>
+
+      <section class="bg-subtle-light flex flex-ai-center flex-jc-center flex-direction-c margin-x p-4">
+        <h1 class="f-3 bold text-center color-content-light m-0">
+          <span>ماهو </span>
+          
+          <sub><img src="public/tkplus.svg" class="w-8" alt="" srcset=""></sub>
+        </h1>
+        <p class="color-content-light f-125 m-2 text-center container">
+          تذكرة+, هو موقع ونظام لإدارة الفعاليات مصمم لتسهيل عملية حجز التذاكر للفعاليات واستكشفها وتنظيمها.
+          منصتنا تقدم واجهة بسيطة, وأنيقة, تسهل لمستخدم من  استكشاف الفعاليات بكل وضوح وشفافية وحجز التذاكر بنقرة زر.
+          أمن, ستحصل على تجربة أمنة عن حجز تاكر وإمكانية استعادة أموالك.
+          انظم, لتحصل على تجربة بسيكة ومريحة وامنة., وانظم لفعاليات ستحكيها لاجيال قادمة.
+        </p>
+      </section>
+    </main>
+
+    <footer class="flex flex-direction-c gap-1 m-2">
+      <ul class="ul-none flex flex-jc-center gap-1 color-content-light m-0 p-0">
+        <li class="hover-primary hover-transitions"><a href="">Privacy Policy</a></li>
+        <li class="hover-primary hover-transitions"><a href="">Terms of Service</a></li>
+        <li class="hover-primary hover-transitions"><a href="">Contact Us</a></li>
+      </ul>
+      <section class="flex flex-jc-center gap-1 text-center color-content-light">
+        <a href=""><i class="fab fa-facebook hover-primary hover-transitions"></i></a>
+        <a href=""><i class="fab fa-instagram hover-primary hover-transitions"></i></a>
+        <a href=""><i class="fab fa-twitter hover-primary hover-transitions"></i></a>
+      </section>
+      <p class="bold color-content-light text-center m-0">
+        كل الحقوق محفوظة لدي
+        <sub><img src="public/tkplus.svg" class="w-4" alt="" srcset=""></sub>
+        <sup>&copy;</sup>
+      </p>
+    </footer>
+    <script src="js/main.js"></script>
   </body>
 </html>
