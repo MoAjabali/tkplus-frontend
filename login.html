@@ -36,7 +36,7 @@
           <h2 class="f-3 bold color-content-light m-0">تسجيل الدخول</h2>
           <p class="f-125 color-content-light m-2">قم بتسجيل الدخول للوصول إلى حسابك</p>
         </div>
-        <form class="mt-8 space-y-6 bg-subtle-light p-8 rounded-1 flex flex-direction-c gap-1">
+        <form class="mt-8 space-y-6 bg-subtle-light p-8 rounded-1 flex flex-direction-c gap-1" method="post">
           <div class="flex flex-direction-c gap-1">
             <div>
               <input autofocus class="w-full p-1 rounded-1 border-subtle-light-1 bg-background-light" id="email" name="email" placeholder="البريد الإلكتروني" required type="email"/>
@@ -52,6 +52,7 @@
           </div>
         </form>
       </section>
+      <div id="notification-container"></div>
     </main>
 
     <footer class="flex flex-direction-c gap-1 m-2">
@@ -71,6 +72,6 @@
         <sup>&copy;</sup>
       </p>
     </footer>
-    <script type="module" src="js/user.js"></script>
+    <script type="module" src="js/pages/login.js"></script>
   </body>
 </html>
