@@ -1,4 +1,4 @@
-export default class ApiClient {
+export class ApiClient {
   constructor(baseURL, defaultHeaders = {}) {
     this.baseURL = "http://localhost:3000/api" + baseURL;
 

@@ -1,4 +1,4 @@
-import { ApiClient } from "apiClient";
+import { ApiClient } from "./apiClient.js";
 const apiClient = new ApiClient("/users");
 
 export const login = (data)=> apiClient.post("/login", data);

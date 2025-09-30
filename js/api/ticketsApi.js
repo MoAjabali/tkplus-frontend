@@ -1,5 +1,4 @@
-// Tickets
-import { ApiClient } from "apiClient";
+import { ApiClient } from "./apiClient.js";
 const apiClient = new ApiClient("/tickets"); 
 
 export const createTicket = (data)=> apiClient.post("/", data);

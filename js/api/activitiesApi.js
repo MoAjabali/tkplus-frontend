@@ -1,4 +1,4 @@
-import { ApiClient } from "apiClient";
+import { ApiClient } from "./apiClient.js";
 const apiClient = new ApiClient("/activities"); 
 
 export const createActivity = (data)=> apiClient.post("/", data);

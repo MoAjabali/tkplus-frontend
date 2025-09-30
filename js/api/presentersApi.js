@@ -1,5 +1,4 @@
-// Presenters
-import { ApiClient } from "apiClient";
+import { ApiClient } from "./apiClient.js";
 const apiClient = new ApiClient("/presenters"); 
 
 export const createPresenter = (activityID, data)=> apiClient.post(`/${activityID}/presenters`, data);
