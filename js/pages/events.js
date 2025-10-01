@@ -1,6 +1,7 @@
 import { getActivities } from "../api/activitiesApi.js";
 import {getPresenters} from "../api/presentersApi.js";
-import { showNotification, openPopup, getRandomInt } from "../utils.js";
+import { showNotification, openPopup, getRandomInt, checkAuth, getCartItems, showCartBudget } from "../utils.js";
+checkAuth();
 
 getActivities().then( (data)=>{
   data.data.activities.forEach(activity => {
@@ -137,7 +138,7 @@ async function activityDetails(activity, randomInt) {
   `
 }
 
-// دالة إضافة العنصر إلى السلة
+// Add to the cart
 window.addToCart = function(activityId) {
   const quantity = document.getElementById('quantity-input').value;
   const cartItems = JSON.parse(localStorage.getItem('cartItems') || '[]');
@@ -152,9 +153,14 @@ window.addToCart = function(activityId) {
       activityId: activityId,
       quantity: parseInt(quantity)
     });
+    let cartBadge = document.getElementById("cart-badge");
+    cartBadge.classList.remove("hide");
+    cartBadge.classList.add("show");
+    cartBadge.innerHTML = (parseInt(cartBadge.innerHTML=="" ? 0 : cartBadge.innerHTML) + 1).toString(); 
   }
   
   localStorage.setItem('cartItems', JSON.stringify(cartItems));
   showNotification('تمت الإضافة إلى السلة بنجاح', 'success');
   document.getElementById('closePopup').click();
 }
+showCartBudget();

@@ -5,18 +5,9 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- icon file css -->
     <link rel="stylesheet" href="css/all.min.css">
-    <!-- render file css -->
-    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
-    <!-- main file css -->
     <link rel="stylesheet" href="css/main-master.css">
     <link href="assets/icon.ico" rel="icon" type="image/x-icon" />
-    <!-- google font  -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet"> -->
-    <!-- Title -->
     <title>Tathkira+ | Landing Page</title>
   </head>
   <body class="bg-background-light dir-rtl">
@@ -32,8 +23,10 @@
       </nav>
 
       <section class="flex gap-1 f-1">
-        <a href="" class="bold color-content-light hover-primary hover-transitions"><i class="fas fa-shopping-cart"></i></a>
-        <a href="" class="bold color-content-light hover-primary hover-transitions"><i class="fas fa-user-circle"></i></a>
+        <a href="./cart.html" class="bold color-content-light hover-primary hover-transitions relative"><i class="fas fa-shopping-cart"></i> 
+          <snap id="cart-badge" class="p-025 absolute bg-primary rounded-full color-content-dark hide"></snap> </a>
+        <a href="./profile.html" class="bold color-content-light hover-primary hover-transitions"><i class="fas fa-user-circle"></i>
+        </a>
       </section>
     </header>
   
@@ -42,24 +35,6 @@
         <h1 class="f-4 text-center color-content-light m-0">الفعاليات</h1>
         <section class="margin-x flex flex-jc-center flec-ai-center flex-warp gap-2" id="events-container"></section>
       </section>
-
-      <!-- <article class="event-box bg-subtle-light rounded-1 transitions-1 overflow-hidden">
-        <div class="relative ">
-          <img src="assets/event1.png" class="w-full box-img"/>
-          <div class="budget absolute bg-red color-content-dark p-025 f-075 bold rounded-1">مغلق</div>
-        </div>
-        <div class="p-1">
-          <h3 class="f-2 bold color-content-light m-0 ">
-            العنوان
-          </h3>
-          <p class="m-0 color-lighter-content-dark m-0 mb-1">
-            ديسمبر 15, 2025 • جدة
-          </p>
-          <button disabled class="w-full rounded-2 bg-lighter-content-dark color-content-dark bold btn">
-            تفاصيل
-          </button>
-        </div>
-      </article> -->
 
       <!-- Popup -->
       <div id="popup" class="popup flex items-center justify-center">

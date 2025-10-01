@@ -61,10 +61,31 @@ function closePopupHandler() {
   document.removeEventListener("keydown", closePopupHandler);
 }
 
+// 
+export const getCartItems = () =>  JSON.parse(localStorage.getItem('cartItems') || '[]')
 
 // Get Random Int
 export function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Auth User
+export function checkAuth() {
+  const token = localStorage.getItem('Token');
+  if (!token) {
+    window.location.href = 'unauthorized.html';
+  }
+}
+
+export const isAuth = () => localStorage.getItem('Token');
+
+export function showCartBudget() {
+  if (localStorage.getItem('cartItems')) {
+    let cartBadge = document.getElementById("cart-badge");
+    cartBadge.classList.remove("hide");
+    cartBadge.classList.add("show");
+    cartBadge.innerHTML = getCartItems().length; 
+  }
 }

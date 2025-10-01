@@ -1,3 +1,35 @@
+import { isAuth } from "../utils.js";
+
+// Auth checker
+if (isAuth) {
+  const btnActions = document.getElementsByClassName("btn-action")
+  for (let i = 0; i < 2; i++) {
+    btnActions[i].innerHTML = `
+      <button class="rounded-full f-1 btn bg-subtle-light color-content-light bold" >
+        <a href="./events.html">
+          الفعاليات
+        </a>
+      </button>
+    `;
+  }
+}else{
+  const btnActions = document.getElementsByClassName("btn-action")
+  for (let i = 0; i < 2; i++) {
+    btnActions[i].innerHTML = `
+      <button class="rounded-full f-1 btn bg-primary color-content-dark bold" >
+        <a href="./login.html">
+          تسجيل مستخدم
+        </a>
+      </button>
+      <button class="rounded-full f-1 btn bg-subtle-light color-content-light bold" >
+        <a href="./register.html">
+          مستخدم جديد
+        </a>
+      </button>
+    `;
+  }
+}
+
 // img Slider
 let index = 1;
 const slides = document.querySelector('.img-slider-container');
