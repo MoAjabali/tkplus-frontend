@@ -1,3 +1,4 @@
+// Notification
 export function showNotification(message, type) {
   const notify = document.createElement("div");
   notify.classList.add("notification", type, "p-1", "rounded-05", "color-content-dark", "flex", "flex-ai-center", "dir-rtl", "gap-1", "bold", "f-1");
@@ -20,4 +21,50 @@ export function showNotification(message, type) {
     notify.classList.remove("show");
     setTimeout(() => notify.remove(), 300);
   }, 3000);
+}
+
+// Popup
+export function openPopup(htmlContent) {
+  const popupContent = document.getElementById("popup-content-div");
+  popupContent.innerHTML = htmlContent;
+  document.getElementById("popup").classList.add("active");
+  
+  // تحسين تجربة المستخدم عند فتح النافذة المنبثقة
+  document.body.style.overflow = "hidden"; // منع التمرير في الخلفية
+  
+  // close btn
+  document.getElementById("closePopup").addEventListener("click", closePopupHandler);
+  
+  // إغلاق النافذة عند النقر خارجها
+  document.getElementById("popup").addEventListener("click", function(e) {
+    if (e.target === this) {
+      closePopupHandler();
+    }
+  });
+  
+  // إضافة مستمع لمفتاح Escape
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape") {
+      closePopupHandler();
+    }
+  });
+}
+
+function closePopupHandler() {
+  document.getElementById("popup").classList.remove("active");
+  document.getElementById("popup-content-div").innerHTML = "";
+  document.body.style.overflow = ""; // استعادة التمرير
+  
+  // إزالة مستمعي الأحداث
+  document.getElementById("closePopup").removeEventListener("click", closePopupHandler);
+  document.getElementById("popup").removeEventListener("click", closePopupHandler);
+  document.removeEventListener("keydown", closePopupHandler);
+}
+
+
+// Get Random Int
+export function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
