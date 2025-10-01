@@ -1,7 +1,7 @@
 import { isAuth } from "../utils.js";
 
 // Auth checker
-if (isAuth) {
+if (isAuth()) {
   const btnActions = document.getElementsByClassName("btn-action")
   for (let i = 0; i < 2; i++) {
     btnActions[i].innerHTML = `

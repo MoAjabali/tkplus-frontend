@@ -1,6 +1,7 @@
 import { getActivities } from "../api/activitiesApi.js";
 import {getPresenters} from "../api/presentersApi.js";
-import { showNotification, openPopup, getRandomInt, checkAuth, getCartItems, showCartBudget } from "../utils.js";
+import { showNotification, openPopup, getRandomInt, checkAuth, getCartItems, showCartBudget, formatDateToYearMonthDay } from "../utils.js";
+
 checkAuth();
 
 getActivities().then( (data)=>{
@@ -37,9 +38,7 @@ function appendToEventsScreen(activity) {
       </h3>
       <p class="m-0 color-lighter-content-dark m-0 mb-1">
         ${
-            new Date(activity.activityDate).toLocaleDateString("ar-EG", {
-                year: "numeric", month: "long", day: "numeric"
-        })} • ${activity.activityLocation}
+            formatDateToYearMonthDay(activity.activityDate)} • ${activity.activityLocation}
       </p>
     </div>
   `

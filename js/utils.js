@@ -89,3 +89,12 @@ export function showCartBudget() {
     cartBadge.innerHTML = getCartItems().length; 
   }
 }
+
+export function formatDateToYearMonthDay(dateString) {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('ar-SA', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+}
