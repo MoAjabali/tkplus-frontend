@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" dir="rtl">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main-master.css">
+    <link href="assets/icon.ico" rel="icon" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <title>Tathkira+ | عربة التسوق</title>
+  </head>
+  <body class="bg-background-light dir-rtl min-h-fullScreen flex flex-direction-c flex-jc-space-btw cart">
+
+    <header class="flex flex-jc-space-btw p-1 flex-ai-center dir-rtl border">
+      <div>
+        <img src="assets/tkplus.svg" class="w-6" alt="" srcset="">
+      </div>
+
+      <nav class="flex gap-1">
+        <a href="./events.html" class="color-content-light hover-primary hover-transitions">الفعاليات</a>
+        <a href="./tickets.html" class="color-content-light hover-primary hover-transitions">تذاكري</a>
+        <a href="./contact.html" class="color-content-light hover-primary hover-transitions">تواصل بنا</a>
+      </nav>
+
+      <section class="flex gap-1 f-1">
+        <a href="./cart.html" class="bold color-primary hover-transitions relative"><i class="fas fa-shopping-cart"></i> 
+          <snap id="cart-badge" class="p-025 absolute bg-primary rounded-full color-content-dark hide"></snap> </a>
+        <a href="./profile.html" class="bold color-content-light hover-primary hover-transitions"><i class="fas fa-user-circle"></i>
+        </a>
+      </section>
+    </header>
+  
+    <main class="flex-grow-1">
+      <section class="container margin-x">
+        <div class="text-center mb-2">
+          <h2 class="f-3 bold color-content-light m-0">عربة التسوق</h2>
+          <p class="f-125 color-content-light m-2">مراجعة وإتمام طلب الحجز</p>
+        </div>
+        
+        <div class="flex gap-2 flex-warp">
+          <!-- قائمة العناصر في العربة -->
+          <div class="flex-grow-1" style="flex-basis: 65%;">
+            <div id="cart-items-container" class="bg-subtle-light p-2 rounded-1">
+              <!-- سيتم ملء هذا القسم ديناميكيًا -->
+            </div>
+          </div>
+          
+          <!-- ملخص الطلب -->
+          <div style="flex-basis: 30%;">
+            <div class="cart-summary">
+              <h3 class="f-15 color-content-light bold mb-2">ملخص الطلب</h3>
+              <div id="cart-summary-container">
+                <!-- سيتم ملء هذا القسم ديناميكيًا -->
+              </div>
+              <button id="checkout-btn" class="w-full btn bg-primary color-content-dark bold rounded-1 hover-transitions mt-2">
+                إتمام الطلب
+              </button>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      <div id="notification-container"></div>
+    </main>
+
+    <footer class="flex flex-direction-c gap-1 m-2">
+      <ul class="ul-none flex flex-jc-center gap-1 color-content-light m-0 p-0">
+        <li class="hover-primary hover-transitions"><a href="">Privacy Policy</a></li>
+        <li class="hover-primary hover-transitions"><a href="">Terms of Service</a></li>
+        <li class="hover-primary hover-transitions"><a href="">Contact Us</a></li>
+      </ul>
+      <section class="flex flex-jc-center gap-1 text-center color-content-light">
+        <a href=""><i class="fab fa-facebook hover-primary hover-transitions"></i></a>
+        <a href=""><i class="fab fa-instagram hover-primary hover-transitions"></i></a>
+        <a href=""><i class="fab fa-twitter hover-primary hover-transitions"></i></a>
+      </section>
+      <p class="bold color-content-light text-center m-0">
+        كل الحقوق محفوظة لدي
+        <sub><img src="assets/tkplus.svg" class="w-4" alt="" srcset=""></sub>
+        <sup>&copy;</sup>
+      </p>
+    </footer>
+    <script type="module" src="js/pages/cart.js"></script>
+  </body>
+</html>
