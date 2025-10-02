@@ -1,3 +1,5 @@
+import { getProfile } from "./api/usersApi.js";
+
 // Notification
 export function showNotification(message, type) {
   const notify = document.createElement("div");
@@ -80,6 +82,16 @@ export function checkAuth() {
 }
 
 export const isAuth = () => localStorage.getItem('Token');
+export async function isAdmin() {
+  try {
+    const response = await getProfile();
+    const user = response.data.user;
+    return user.userRole === "admin";
+  } catch (err) {
+    return false;
+  }
+}
+
 
 export function showCartBudget() {
   if (localStorage.getItem('cartItems')) {
@@ -97,4 +109,8 @@ export function formatDateToYearMonthDay(dateString) {
     month: 'long',
     day: 'numeric'
   });
+}
+function formatDateForInput(dateString) {
+  const date = new Date(dateString);
+  return date.toISOString().slice(0, 16); // تنسيق YYYY-MM-DDThh:mm
 }

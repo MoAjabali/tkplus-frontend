@@ -1,5 +1,5 @@
 import { getActivities } from "../api/activitiesApi.js";
-import {getPresenters} from "../api/presentersApi.js";
+import { getPresenters } from "../api/presentersApi.js";
 import { showNotification, openPopup, getRandomInt, checkAuth, getCartItems, showCartBudget, formatDateToYearMonthDay } from "../utils.js";
 
 checkAuth();

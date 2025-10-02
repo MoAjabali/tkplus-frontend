@@ -218,11 +218,6 @@ input::placeholder{
 }
 .popup.active { transform: scale(1); }
 
-.close {
-  top: 1rem;
-  right: 1rem;
-  z-index: 10000;
-}
 
 /* Modern Popup Styles */
 .popup-content {
@@ -400,6 +395,19 @@ input::placeholder{
   cursor: not-allowed;
   transform: none;
   box-shadow: none;
+}
+/* Close Button */
+.close-popup {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--content-light);
+  transition: color 0.3s ease;
+}
+.close-popup:hover {
+  color: var(--primary);
 }
 
 /* Status Badges */

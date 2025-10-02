@@ -1,5 +1,7 @@
 import { login } from "../api/usersApi.js";
-import { showNotification } from "../utils.js";
+import { isAuth, showNotification } from "../utils.js";
+if(isAuth()) window.location.replace("/events.html");
+
 
 document.getElementById("login-btn").addEventListener("click", (e)=>{
   e.preventDefault();
